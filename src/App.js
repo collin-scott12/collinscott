@@ -1,28 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './img/logo.svg';
+import dribbble from './img/dribbble.svg';
+import linkedin from './img/linkedin.svg';
+import twitter from './img/twitter.svg';
+import email from './img/email.svg';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Header />
     );
   }
+}
+
+class Header extends Component {
+    render() {
+        return (
+            <header>
+                <div class="col-header-4">
+                    <a class="header-links" href="#">PORTFOLIO</a>
+                    <a class="header-links" href="#">ABOUT</a>
+                    <a class="header-links" href="#">RESUME</a>
+                </div>
+                <div class="col-header-2">
+                    <a href="#"><img class="header-logo" src={logo} /></a>
+                </div>
+                <div class="col-header-4">
+                    <a href="#"><img src={dribbble} /></a>
+                    <a href="#"><img src={linkedin} /></a>
+                    <a href="#"><img src={twitter} /></a>
+                    <a href="#"><img src={email} /></a>
+                </div>
+            </header>
+        );
+    }
 }
 
 export default App;
